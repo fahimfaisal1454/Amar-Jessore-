@@ -70,20 +70,20 @@ export default function NewsSection() {
                 />
               </div>
               <div className="p-6 space-y-3">
-                <div className="text-sm text-cyan-600 font-semibold">
+                <div className="text-sm text-lime-600 font-semibold">
                   {new Date(item.date).toLocaleDateString("en-US", {
                     month: "short",
                     day: "numeric",
                     year: "numeric",
                   })}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 group-hover:text-cyan-600 transition-colors">
+                <h3 className="text-xl font-bold text-gray-900 group-hover:text-lime-600 transition-colors">
                   {item.title}
                 </h3>
                 <p className="text-gray-600">{item.summary}</p>
                 <a
                   href="#"
-                  className="inline-block text-cyan-600 font-semibold hover:text-cyan-700 transition-all"
+                  className="inline-block text-lime-600 font-semibold hover:text-lime-700 transition-all"
                 >
                   Read More →
                 </a>

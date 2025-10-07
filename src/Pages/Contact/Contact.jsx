@@ -30,9 +30,9 @@ export default function Contact() {
     <section id="contact" className="scroll-mt-28 md:scroll-mt-32 bg-white text-gray-900">
       {/* Hero (centered + TIGHTER paddings) */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-50 via-white to-blue-50" />
+        <div className="absolute inset-0 bg-gradient-to-br from-lime-50 via-white to-blue-50" />
         <div className="relative mx-auto max-w-6xl px-6 pt-10 pb-2 md:pt-1 md:pb-2 text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-200 bg-white px-3 py-1 text-xs font-semibold text-cyan-700 mx-auto">
+          <div className="inline-flex items-center gap-2 rounded-full border border-lime-200 bg-white px-3 py-1 text-xs font-semibold text-lime-700 mx-auto">
             Get in Touch
           </div>
           <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
@@ -52,7 +52,7 @@ export default function Contact() {
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 md:grid-cols-5">
           {/* Left: Contact Info */}
           <aside className="md:col-span-2 space-y-6">
-            <div className="rounded-2xl border border-cyan-100 bg-white p-6 shadow-sm">
+            <div className="rounded-2xl border border-lime-100 bg-white p-6 shadow-sm">
               <h2 className="text-xl font-bold">Contact Information</h2>
               <p className="mt-1 text-gray-600">
                 Reach us via email, phone, or visit our office.
@@ -60,12 +60,12 @@ export default function Contact() {
 
               <ul className="mt-6 space-y-4">
                 <li className="flex gap-3">
-                  <Mail className="mt-1 h-5 w-5 text-cyan-600" />
+                  <Mail className="mt-1 h-5 w-5 text-lime-600" />
                   <div>
                     <p className="text-sm text-gray-500">Email</p>
                     <a
                       href="mailto:info@amarjessore.org"
-                      className="font-medium text-cyan-700 hover:text-cyan-800"
+                      className="font-medium text-lime-700 hover:text-lime-800"
                     >
                       info@amarjessore.org
                     </a>
@@ -73,12 +73,12 @@ export default function Contact() {
                 </li>
 
                 <li className="flex gap-3">
-                  <Phone className="mt-1 h-5 w-5 text-cyan-600" />
+                  <Phone className="mt-1 h-5 w-5 text-lime-600" />
                   <div>
                     <p className="text-sm text-gray-500">Phone</p>
                     <a
                       href="tel:+8801XXXXXXXXX"
-                      className="font-medium text-cyan-700 hover:text-cyan-800"
+                      className="font-medium text-lime-700 hover:text-lime-800"
                     >
                       +880 1X-XXXX-XXXX
                     </a>
@@ -86,7 +86,7 @@ export default function Contact() {
                 </li>
 
                 <li className="flex gap-3">
-                  <MapPin className="mt-1 h-5 w-5 text-cyan-600" />
+                  <MapPin className="mt-1 h-5 w-5 text-lime-600" />
                   <div>
                     <p className="text-sm text-gray-500">Address</p>
                     <p className="font-medium">
@@ -96,7 +96,7 @@ export default function Contact() {
                 </li>
 
                 <li className="flex gap-3">
-                  <Clock className="mt-1 h-5 w-5 text-cyan-600" />
+                  <Clock className="mt-1 h-5 w-5 text-lime-600" />
                   <div>
                     <p className="text-sm text-gray-500">Hours</p>
                     <p className="font-medium">Sat–Thu: 10:00–18:00</p>
@@ -106,7 +106,7 @@ export default function Contact() {
             </div>
 
             {/* Map */}
-            <div className="overflow-hidden rounded-2xl border border-cyan-100 shadow-sm">
+            <div className="overflow-hidden rounded-2xl border border-lime-100 shadow-sm">
               <iframe
                 title="Amar Jessore Map"
                 className="h-56 w-full"
@@ -122,7 +122,7 @@ export default function Contact() {
           <div className="md:col-span-3">
             <form
               onSubmit={handleSubmit}
-              className="rounded-2xl border border-cyan-100 bg-white p-6 shadow-sm"
+              className="rounded-2xl border border-lime-100 bg-white p-6 shadow-sm"
             >
               <h2 className="text-xl font-bold">Send us a message</h2>
               <p className="mt-1 text-gray-600">
@@ -139,7 +139,7 @@ export default function Contact() {
                     name="name"
                     type="text"
                     required
-                    className="mt-1 w-full rounded-xl border border-gray-300 bg-white px-4 py-3 outline-none ring-cyan-300 focus:ring-2"
+                    className="mt-1 w-full rounded-xl border border-gray-300 bg-white px-4 py-3 outline-none ring-lime-300 focus:ring-2"
                     placeholder="Your name"
                   />
                 </div>
@@ -153,7 +153,7 @@ export default function Contact() {
                     name="email"
                     type="email"
                     required
-                    className="mt-1 w-full rounded-xl border border-gray-300 bg-white px-4 py-3 outline-none ring-cyan-300 focus:ring-2"
+                    className="mt-1 w-full rounded-xl border border-gray-300 bg-white px-4 py-3 outline-none ring-lime-300 focus:ring-2"
                     placeholder="you@example.com"
                   />
                 </div>
@@ -166,7 +166,7 @@ export default function Contact() {
                     id="phone"
                     name="phone"
                     type="tel"
-                    className="mt-1 w-full rounded-xl border border-gray-300 bg-white px-4 py-3 outline-none ring-cyan-300 focus:ring-2"
+                    className="mt-1 w-full rounded-xl border border-gray-300 bg-white px-4 py-3 outline-none ring-lime-300 focus:ring-2"
                     placeholder="+880…"
                   />
                 </div>
@@ -179,7 +179,7 @@ export default function Contact() {
                     id="subject"
                     name="subject"
                     type="text"
-                    className="mt-1 w-full rounded-xl border border-gray-300 bg-white px-4 py-3 outline-none ring-cyan-300 focus:ring-2"
+                    className="mt-1 w-full rounded-xl border border-gray-300 bg-white px-4 py-3 outline-none ring-lime-300 focus:ring-2"
                     placeholder="How can we help?"
                   />
                 </div>
@@ -193,7 +193,7 @@ export default function Contact() {
                     name="message"
                     required
                     rows={6}
-                    className="mt-1 w-full rounded-xl border border-gray-300 bg-white px-4 py-3 outline-none ring-cyan-300 focus:ring-2"
+                    className="mt-1 w-full rounded-xl border border-gray-300 bg-white px-4 py-3 outline-none ring-lime-300 focus:ring-2"
                     placeholder="Write your message here…"
                   />
                 </div>
@@ -202,14 +202,14 @@ export default function Contact() {
               <div className="mt-6 flex items-center justify-between gap-3">
                 <button
                   type="submit"
-                  className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-3 font-semibold text-white shadow hover:shadow-cyan-400/30 transition-transform hover:scale-105"
+                  className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-lime-500 to-blue-500 px-6 py-3 font-semibold text-white shadow hover:shadow-lime-400/30 transition-transform hover:scale-105"
                 >
                   <Send className="h-4 w-4" />
                   Send Message
                 </button>
 
                 {status.ok && (
-                  <span className="text-sm font-medium text-cyan-700">
+                  <span className="text-sm font-medium text-lime-700">
                     Thanks! Your message is ready in your email app.
                   </span>
                 )}

@@ -129,7 +129,7 @@ const Banner = () => {
           <div className="flex lg:flex-1">
             <a href="#home" onClick={(e) => handleNavClick(e, '#home')} className="flex items-center gap-3 group">
               <div className="relative">
-                <div className="absolute inset-0 bg-cyan-400/30 rounded-full blur-md group-hover:blur-lg transition-all duration-300"></div>
+                <div className="absolute inset-0 bg-lime-400/30 rounded-full blur-md group-hover:blur-lg transition-all duration-300"></div>
                 <img
                   className="relative h-10 w-auto transform group-hover:scale-110 transition-transform duration-300"
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Circle-icons-heart.svg/1024px-Circle-icons-heart.svg.png"
@@ -149,10 +149,10 @@ const Banner = () => {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="nav-link relative text-lg font-semibold text-white hover:text-cyan-400 transition-all duration-300 group"
+                className="nav-link relative text-lg font-semibold text-white hover:text-lime-400 transition-all duration-300 group"
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-lime-400 to-blue-400 group-hover:w-full transition-all duration-300"></span>
               </a>
             ))}
           </div>
@@ -162,10 +162,10 @@ const Banner = () => {
             <a
               href="#news"
               onClick={(e) => handleNavClick(e, '#news')}
-              className="relative overflow-hidden rounded-full bg-gradient-to-r from-lime-500 to-green-500 px-6 py-3 text-sm font-bold text-white shadow-lg hover:shadow-cyan-500/30 transform hover:scale-105 transition-all duration-300 group"
+              className="relative overflow-hidden rounded-full bg-gradient-to-r from-lime-500 to-green-500 px-6 py-3 text-sm font-bold text-white shadow-lg hover:shadow-lime-500/30 transform hover:scale-105 transition-all duration-300 group"
             >
               <span className="relative z-10">Latest News</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-lime-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
             </a>
           </div>
 
@@ -174,7 +174,7 @@ const Banner = () => {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="inline-flex items-center justify-center rounded-lg p-3 text-white bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 transform hover:scale-105 transition-all duration-300"
+              className="inline-flex items-center justify-center rounded-lg p-3 text-white bg-gradient-to-r from-lime-600 to-blue-600 hover:from-lime-500 hover:to-blue-500 transform hover:scale-105 transition-all duration-300"
             >
               {mobileMenuOpen ? (
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -191,14 +191,14 @@ const Banner = () => {
 
         {/* Mobile Menu Panel */}
         {mobileMenuOpen && (
-          <div className="lg:hidden absolute inset-x-0 top-full z-50 bg-black/95 backdrop-blur-lg shadow-2xl border-t border-cyan-500/20">
+          <div className="lg:hidden absolute inset-x-0 top-full z-50 bg-black/95 backdrop-blur-lg shadow-2xl border-t border-lime-500/20">
             <div className="p-6 space-y-4">
               {navigation.map((item, index) => (
                 <a
                   key={item.name}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className="block text-base font-semibold text-white hover:text-cyan-400 transition-all duration-300 transform hover:translate-x-2"
+                  className="block text-base font-semibold text-white hover:text-lime-400 transition-all duration-300 transform hover:translate-x-2"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {item.name}
@@ -209,7 +209,7 @@ const Banner = () => {
               <a
                 href="#news"
                 onClick={(e) => handleNavClick(e, '#news')}
-                className="block w-full text-center rounded-full bg-gradient-to-r from-lime-500 to-green-500 px-6 py-3 text-base font-bold text-white shadow-lg hover:shadow-cyan-500/30 transform hover:scale-105 transition-all duration-300"
+                className="block w-full text-center rounded-full bg-gradient-to-r from-lime-500 to-green-500 px-6 py-3 text-base font-bold text-white shadow-lg hover:shadow-lime-500/30 transform hover:scale-105 transition-all duration-300"
               >
                 Latest News
               </a>
@@ -241,7 +241,7 @@ const Banner = () => {
               {[...Array(20)].map((_, i) => (
                 <div
                   key={i}
-                  className="absolute w-2 h-2 bg-cyan-400/20 rounded-full animate-pulse"
+                  className="absolute w-2 h-2 bg-lime-400/20 rounded-full animate-pulse"
                   style={{
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,
@@ -256,7 +256,7 @@ const Banner = () => {
             <div className="relative z-30 mx-auto max-w-4xl px-6 pt-32 text-center sm:pt-48 lg:pt-56 text-white">
               <div className="space-y-8">
                 <h1 className={`text-reveal text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl ${index === currentSlide ? 'animate-text-reveal' : ''}`}>
-                  <span className="inline-block bg-gradient-to-r from-white via-cyan-100 to-white bg-clip-text text-transparent">
+                  <span className="inline-block bg-gradient-to-r from-white via-lime-100 to-white bg-clip-text text-transparent">
                     {slide.title}
                   </span>
                 </h1>
@@ -269,17 +269,17 @@ const Banner = () => {
                   <a
                     href="#news"
                     onClick={(e) => handleNavClick(e, '#news')}
-                    className="relative overflow-hidden rounded-full bg-gradient-to-r from-lime-500 to-green-500 px-8 py-4 text-lg font-bold text-white shadow-2xl hover:shadow-cyan-500/40 transform hover:scale-110 transition-all duration-300 group"
+                    className="relative overflow-hidden rounded-full bg-gradient-to-r from-lime-500 to-green-500 px-8 py-4 text-lg font-bold text-white shadow-2xl hover:shadow-lime-500/40 transform hover:scale-110 transition-all duration-300 group"
                   >
                     <span className="relative z-10">{slide.ctaPrimary}</span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-cyan-300 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-lime-300 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
                     <div className="absolute inset-0 animate-pulse bg-white/10 rounded-full"></div>
                   </a>
 
                   <a
                     href="#about"
                     onClick={(e) => handleNavClick(e, '#about')}
-                    className="text-lg font-semibold text-cyan-300 hover:text-white transition-all duration-300 group flex items-center gap-2"
+                    className="text-lg font-semibold text-lime-300 hover:text-white transition-all duration-300 group flex items-center gap-2"
                   >
                     <span>{slide.ctaSecondary}</span>
                     <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -299,7 +299,7 @@ const Banner = () => {
               key={index}
               className={`slider-indicator transition-all duration-500 ${
                 index === currentSlide
-                  ? 'w-12 h-3 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full shadow-lg shadow-cyan-400/50'
+                  ? 'w-12 h-3 bg-gradient-to-r from-lime-400 to-blue-400 rounded-full shadow-lg shadow-lime-400/50'
                   : 'w-3 h-3 bg-white/50 hover:bg-white/80 rounded-full'
               }`}
               aria-label={`Go to slide ${index + 1}`}
@@ -310,7 +310,7 @@ const Banner = () => {
 
         {/* Navigation Arrows */}
         <button
-          className={`absolute left-6 top-1/2 z-40 -translate-y-1/2 rounded-full bg-black/50 backdrop-blur-md p-4 text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 transform hover:scale-110 ${
+          className={`absolute left-6 top-1/2 z-40 -translate-y-1/2 rounded-full bg-black/50 backdrop-blur-md p-4 text-white hover:bg-gradient-to-r hover:from-lime-500/20 hover:to-blue-500/20 border border-lime-400/30 hover:border-lime-400/60 transition-all duration-300 transform hover:scale-110 ${
             isHovered ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
           }`}
           onClick={prevSlide}
@@ -321,7 +321,7 @@ const Banner = () => {
         </button>
 
         <button
-          className={`absolute right-6 top-1/2 z-40 -translate-y-1/2 rounded-full bg-black/50 backdrop-blur-md p-4 text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 transform hover:scale-110 ${
+          className={`absolute right-6 top-1/2 z-40 -translate-y-1/2 rounded-full bg-black/50 backdrop-blur-md p-4 text-white hover:bg-gradient-to-r hover:from-lime-500/20 hover:to-blue-500/20 border border-lime-400/30 hover:border-lime-400/60 transition-all duration-300 transform hover:scale-110 ${
             isHovered ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'
           }`}
           onClick={nextSlide}

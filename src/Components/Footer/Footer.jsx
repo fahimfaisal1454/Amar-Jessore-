@@ -59,8 +59,8 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full text-gray-800 bg-cyan-400  font-sans mt-auto ">
-      <div className="max-w-7xl mx-auto p-6 bg-cyan-400">
+    <footer className="w-full text-gray-800 bg-lime-400  font-sans mt-auto ">
+      <div className="max-w-7xl mx-auto p-6 bg-lime-400">
    
         {/* Copyright and Credits - Always shows */}
         <div className="text-center text-xs text-black">

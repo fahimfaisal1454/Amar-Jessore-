@@ -13,7 +13,7 @@ export default function AboutUs() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 grid gap-12 md:grid-cols-2 items-center">
         {/* Left: copy */}
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-semibold text-cyan-700 border-cyan-200 bg-cyan-50">
+          <div className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-semibold text-lime-700 border-lime-200 bg-lime-50">
             <HeartHandshake className="w-4 h-4" /> About Amar Jessore
           </div>
 
@@ -34,7 +34,7 @@ export default function AboutUs() {
           {/* Pill list */}
           <ul className="mt-6 space-y-3">
             <li className="flex items-start gap-3">
-              <GraduationCap className="w-6 h-6 text-cyan-600 mt-1" />
+              <GraduationCap className="w-6 h-6 text-lime-600 mt-1" />
               <div>
                 <p className="font-semibold">Education Support</p>
                 <p className="text-gray-600 text-sm">
@@ -43,7 +43,7 @@ export default function AboutUs() {
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <Stethoscope className="w-6 h-6 text-cyan-600 mt-1" />
+              <Stethoscope className="w-6 h-6 text-lime-600 mt-1" />
               <div>
                 <p className="font-semibold">Healthcare Access</p>
                 <p className="text-gray-600 text-sm">
@@ -52,7 +52,7 @@ export default function AboutUs() {
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <Leaf className="w-6 h-6 text-cyan-600 mt-1" />
+              <Leaf className="w-6 h-6 text-lime-600 mt-1" />
               <div>
                 <p className="font-semibold">Environment Action</p>
                 <p className="text-gray-600 text-sm">
@@ -88,7 +88,7 @@ export default function AboutUs() {
           </div>
 
           {/* glow */}
-          <div className="pointer-events-none absolute -inset-6 rounded-[2rem] bg-gradient-to-r from-cyan-200/30 to-blue-200/30 blur-2xl" />
+          <div className="pointer-events-none absolute -inset-6 rounded-[2rem] bg-gradient-to-r from-lime-200/30 to-blue-200/30 blur-2xl" />
         </div>
       </div>
     </section>

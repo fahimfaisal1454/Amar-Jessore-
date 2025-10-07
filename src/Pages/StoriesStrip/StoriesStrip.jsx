@@ -49,11 +49,11 @@ export default function StoriesStrip({ posts = [] }) {
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 text-center">
               Our Stories
             </h2>
-            <div className="mt-3 w-24 h-1 bg-brand-600 rounded-full mx-auto"></div>
+            <div className="mt-3 w-24 h-1 bg-lime-600 rounded-full mx-auto"></div>
           </div>
           <a
             href="/resources"
-            className="text-brand-700 font-medium hover:underline"
+            className="text-lime-700 font-medium hover:underline"
           >
             All stories →
           </a>
@@ -77,7 +77,7 @@ export default function StoriesStrip({ posts = [] }) {
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent"></div>
                 {/* tag pill */}
                 {p.tag && (
-                  <span className="absolute left-3 top-3 inline-flex items-center rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-brand-700 shadow">
+                  <span className="absolute left-3 top-3 inline-flex items-center rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-lime-700 shadow">
                     {p.tag}
                   </span>
                 )}
@@ -87,7 +87,7 @@ export default function StoriesStrip({ posts = [] }) {
                 <div className="text-xs text-gray-500">
                   {p.date ? new Date(p.date).toLocaleDateString() : ""}
                 </div>
-                <h3 className="mt-1 text-lg font-semibold text-gray-900 group-hover:text-brand-700 transition-colors">
+                <h3 className="mt-1 text-lg font-semibold text-gray-900 group-hover:text-lime-700 transition-colors">
                   {p.title}
                 </h3>
                 {p.excerpt && (
@@ -95,13 +95,13 @@ export default function StoriesStrip({ posts = [] }) {
                     {p.excerpt}
                   </p>
                 )}
-                <div className="mt-4 inline-flex items-center text-brand-700 font-medium group-hover:translate-x-1 transition-transform">
+                <div className="mt-4 inline-flex items-center text-lime-700 font-medium group-hover:translate-x-1 transition-transform">
                   Read more →
                 </div>
               </div>
 
               {/* bottom accent on hover */}
-              <div className="absolute bottom-0 left-0 h-1 w-0 bg-brand-600 group-hover:w-full transition-all duration-500"></div>
+              <div className="absolute bottom-0 left-0 h-1 w-0 bg-lime-600 group-hover:w-full transition-all duration-500"></div>
             </a>
           ))}
         </div>
