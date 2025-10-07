@@ -1,23 +1,23 @@
-import daisyui from "daisyui";
-
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        peach: "#FFD1DC",
-        dustyrose: "#C28E8E",
-        dustyroseDark: "#A46A6A",
-        palegold: "#F0D9B5",
-        palegoldDark: "#D1BA8E",
-        cream: "#FFF9F0",
-        textStrong: "#2E2E2E",
+        brand: {
+          50:  "#ecfeff",
+          100: "#cffafe",
+          200: "#a5f3fc",
+          300: "#67e8f9",
+          400: "#22d3ee",
+          500: "#06b6d4",
+          600: "#0891b2",
+          700: "#0e7490",
+          800: "#155e75",
+          900: "#164e63",
+        },
       },
     },
   },
-  plugins: [daisyui],
+  plugins: [],
 };

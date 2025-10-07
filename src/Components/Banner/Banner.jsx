@@ -10,7 +10,7 @@ const Banner = () => {
     { name: "Home", href: "#home" },
     { name: "About Us", href: "#about" },
     { name: "Projects", href: "#projects" },
-    { name: "News", href: "#news" },           // 🔁 replaced Donate → News
+    { name: "News", href: "#news" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -19,7 +19,7 @@ const Banner = () => {
       image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=80",
       title: "Education Changes Lives",
       description: "Empowering communities through quality education and learning opportunities for every child.",
-      ctaPrimary: "Read News",                 // 🔁 CTA now points to News
+      ctaPrimary: "Read News",
       ctaSecondary: "Learn More →"
     },
     {
@@ -65,19 +65,59 @@ const Banner = () => {
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   const goToSlide = (index) => setCurrentSlide(index);
 
-  // Smooth scroll with dynamic offset for fixed header
+  // === SMOOTH SCROLL THAT WORKS WITH WINDOW OR NESTED <main> ===
+  const getScrollableAncestor = (el) => {
+    let node = el.parentElement;
+    while (node && node !== document.body) {
+      const style = getComputedStyle(node);
+      const canScroll = /(auto|scroll)/.test(style.overflowY || style.overflow);
+      if (canScroll && node.scrollHeight > node.clientHeight) return node;
+      node = node.parentElement;
+    }
+    return document.scrollingElement || document.documentElement;
+  };
+
+  const easeInOutCubic = (t) =>
+    t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+  const animateScroll = (scroller, to, duration = 650) => {
+    const start = scroller.scrollTop;
+    const diff = to - start;
+    let startTs;
+    const step = (ts) => {
+      if (!startTs) startTs = ts;
+      const p = Math.min((ts - startTs) / duration, 1);
+      scroller.scrollTop = start + diff * easeInOutCubic(p);
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+
   const handleNavClick = (e, href) => {
     e.preventDefault();
     const target = document.querySelector(href);
     if (!target) return;
 
     const header = document.querySelector('header');
-    const offset = (header?.offsetHeight || 96) + 8; // header height + small cushion
-    const y = target.getBoundingClientRect().top + window.pageYOffset - offset;
+    const offset = (header?.offsetHeight || 96) + 8;
 
-    window.scrollTo({ top: y, behavior: 'smooth' });
+    // choose the element that actually scrolls for THIS target
+    const scroller = getScrollableAncestor(target);
+
+    // compute where to land, relative to that scroller
+    const scrollerTop =
+      scroller === document.documentElement || scroller === document.body
+        ? 0
+        : scroller.getBoundingClientRect().top;
+
+    const targetTop = target.getBoundingClientRect().top;
+    const current = scroller.scrollTop;
+    const y = current + (targetTop - scrollerTop) - offset;
+
+    animateScroll(scroller, y, 650);
     setMobileMenuOpen(false);
   };
+  // === END SMOOTH SCROLL ===
 
   return (
     <div className="relative bg-black">
@@ -116,7 +156,7 @@ const Banner = () => {
             ))}
           </div>
 
-          {/* Right-side CTA button → News */}
+          {/* Right-side CTA → News */}
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <a
               href="#news"
@@ -297,7 +337,7 @@ const Banner = () => {
         @keyframes pageTurnIn {
           0% { transform: rotateY(-90deg); opacity: 0; }
           50% { opacity: 0.8; }
-          100% { transform: rotateY(0deg); opacity: 1; }
+          100% { transform: rotateY(0); opacity: 1; }
         }
         .page-turn-in { animation: pageTurnIn 1s ease-out; transform-origin: left center; }
 
