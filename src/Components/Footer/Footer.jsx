@@ -65,8 +65,8 @@ const Footer = () => {
         {/* Copyright and Credits - Always shows */}
         <div className="text-center text-xs text-black">
           <p>
-            © 2025 {safeDisplay(institution?.name, "প্রতিষ্ঠানের নাম")},{" "}
-            {safeDisplay(institution?.address, "ঠিকানা")}. All rights reserved.
+            © 2025 {safeDisplay(institution?.name, "Amar Jessore")},{" "}
+            {safeDisplay(institution?.address, "Jessore Sadar")}. All rights reserved.
             <span className="mx-2">|</span>
             Powered by{" "}
             <a
