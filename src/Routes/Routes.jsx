@@ -7,7 +7,7 @@ import Register from "../Pages/Authentication/Register";
 import Dashboard from "../Layout/Dashboard";
 
 import ProtectedRoute from "./ProtectedRoute";
-import About from "../Pages/About";
+import About from "../Pages/AboutUs/AboutUs";
 
 
 

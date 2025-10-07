@@ -39,7 +39,7 @@ export default function StoriesStrip({ posts = [] }) {
   const list = (posts && posts.length > 0 ? posts : demoPosts).slice(0, 3);
 
   return (
-    <section className="relative bg-gradient-to-b from-white to-gray-50 py-16 overflow-hidden">
+    <section id="stories" className="relative bg-gradient-to-b from-white to-gray-50 py-16 overflow-hidden">
       {/* subtle pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,#e5e7eb_1px,transparent_0)] [background-size:22px_22px] opacity-30"></div>
 

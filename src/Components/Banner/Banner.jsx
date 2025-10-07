@@ -10,6 +10,7 @@ const Banner = () => {
     { name: "Home", href: "#home" },
     { name: "About Us", href: "#about" },
     { name: "Projects", href: "#projects" },
+    { name: "Stories", href: "#stories" },
     { name: "News", href: "#news" },
     { name: "Contact", href: "#contact" },
   ];
@@ -135,7 +136,7 @@ const Banner = () => {
                   alt="NGO Logo"
                 />
               </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-gradient-to-r from-lime-400 to-green-400 bg-clip-text text-transparent">
                 Amar Jashore
               </span>
             </a>
@@ -161,7 +162,7 @@ const Banner = () => {
             <a
               href="#news"
               onClick={(e) => handleNavClick(e, '#news')}
-              className="relative overflow-hidden rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-3 text-sm font-bold text-white shadow-lg hover:shadow-cyan-500/30 transform hover:scale-105 transition-all duration-300 group"
+              className="relative overflow-hidden rounded-full bg-gradient-to-r from-lime-500 to-green-500 px-6 py-3 text-sm font-bold text-white shadow-lg hover:shadow-cyan-500/30 transform hover:scale-105 transition-all duration-300 group"
             >
               <span className="relative z-10">Latest News</span>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
@@ -208,7 +209,7 @@ const Banner = () => {
               <a
                 href="#news"
                 onClick={(e) => handleNavClick(e, '#news')}
-                className="block w-full text-center rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-3 text-base font-bold text-white shadow-lg hover:shadow-cyan-500/30 transform hover:scale-105 transition-all duration-300"
+                className="block w-full text-center rounded-full bg-gradient-to-r from-lime-500 to-green-500 px-6 py-3 text-base font-bold text-white shadow-lg hover:shadow-cyan-500/30 transform hover:scale-105 transition-all duration-300"
               >
                 Latest News
               </a>
@@ -268,7 +269,7 @@ const Banner = () => {
                   <a
                     href="#news"
                     onClick={(e) => handleNavClick(e, '#news')}
-                    className="relative overflow-hidden rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-lg font-bold text-white shadow-2xl hover:shadow-cyan-500/40 transform hover:scale-110 transition-all duration-300 group"
+                    className="relative overflow-hidden rounded-full bg-gradient-to-r from-lime-500 to-green-500 px-8 py-4 text-lg font-bold text-white shadow-2xl hover:shadow-cyan-500/40 transform hover:scale-110 transition-all duration-300 group"
                   >
                     <span className="relative z-10">{slide.ctaPrimary}</span>
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-cyan-300 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>

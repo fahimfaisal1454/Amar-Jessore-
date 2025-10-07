@@ -43,7 +43,7 @@ export default function NewsSection() {
   return (
     <section
       id="news"
-      className="scroll-mt-28 md:scroll-mt-32 bg-gray-50 text-gray-900 py-20"
+      className="scroll-mt-28 md:scroll-mt-32 bg-gray-50 text-gray-900 py-1"
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-12">

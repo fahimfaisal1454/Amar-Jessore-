@@ -5,7 +5,7 @@ export default function AboutUs() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden bg-white text-gray-900 py-20 scroll-mt-28 md:scroll-mt-32"
+      className="relative overflow-hidden bg-white text-gray-900 py-5 scroll-mt-28 md:scroll-mt-32"
     >
       {/* subtle background pattern */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,#e5e7eb_1px,transparent_0)] [background-size:20px_20px] opacity-50" />
@@ -19,7 +19,7 @@ export default function AboutUs() {
 
           <h2 className="mt-4 text-4xl md:text-5xl font-extrabold leading-tight">
             Empowering Jessore through{" "}
-            <span className="bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-lime-500 to-green-500 bg-clip-text text-transparent">
               education, health & environment
             </span>
             .

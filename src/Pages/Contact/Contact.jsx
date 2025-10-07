@@ -12,7 +12,6 @@ export default function Contact() {
     const payload = Object.fromEntries(form.entries());
 
     try {
-      // TODO: hook up a real endpoint if you want
       const body = encodeURIComponent(
         `Name: ${payload.name}\nEmail: ${payload.email}\nPhone: ${payload.phone || "-"}\nSubject: ${payload.subject}\n\n${payload.message}`
       );
@@ -28,28 +27,28 @@ export default function Contact() {
   }
 
   return (
-    <div className="bg-white text-gray-900">
-      {/* Hero (centered + reduced bottom padding) */}
+    <section id="contact" className="scroll-mt-28 md:scroll-mt-32 bg-white text-gray-900">
+      {/* Hero (centered + TIGHTER paddings) */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-50 via-white to-blue-50" />
-        <div className="relative mx-auto max-w-6xl px-6 pt-14 pb-8 md:pt-16 md:pb-6 text-center">
+        <div className="relative mx-auto max-w-6xl px-6 pt-10 pb-2 md:pt-1 md:pb-2 text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-cyan-200 bg-white px-3 py-1 text-xs font-semibold text-cyan-700 mx-auto">
             Get in Touch
           </div>
-          <h1 className="mt-4 text-4xl md:text-5xl font-extrabold leading-tight">
+          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
             Contact{" "}
-            <span className="bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-lime-500 to-green-500 bg-clip-text text-transparent">
               Amar Jessore
             </span>
           </h1>
-          <p className="mt-3 max-w-2xl mx-auto text-lg text-gray-600">
+          <p className="mt-2 max-w-2xl mx-auto text-lg text-gray-600">
             Questions, ideas, or want to volunteer? We’d love to hear from you.
           </p>
         </div>
       </section>
 
-      {/* Content (tighter top padding) */}
-      <section className="relative pt-6 md:pt-8 pb-12 md:pb-16">
+      {/* Content (also reduced top padding so it sits closer to the heading) */}
+      <section className="relative pt-3 md:pt-4 pb-12 md:pb-14">
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 md:grid-cols-5">
           {/* Left: Contact Info */}
           <aside className="md:col-span-2 space-y-6">
@@ -132,10 +131,7 @@ export default function Contact() {
 
               <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
                 <div className="sm:col-span-1">
-                  <label
-                    htmlFor="name"
-                    className="text-sm font-medium text-gray-700"
-                  >
+                  <label htmlFor="name" className="text-sm font-medium text-gray-700">
                     Full Name
                   </label>
                   <input
@@ -149,10 +145,7 @@ export default function Contact() {
                 </div>
 
                 <div className="sm:col-span-1">
-                  <label
-                    htmlFor="email"
-                    className="text-sm font-medium text-gray-700"
-                  >
+                  <label htmlFor="email" className="text-sm font-medium text-gray-700">
                     Email
                   </label>
                   <input
@@ -166,10 +159,7 @@ export default function Contact() {
                 </div>
 
                 <div className="sm:col-span-1">
-                  <label
-                    htmlFor="phone"
-                    className="text-sm font-medium text-gray-700"
-                  >
+                  <label htmlFor="phone" className="text-sm font-medium text-gray-700">
                     Phone (optional)
                   </label>
                   <input
@@ -182,10 +172,7 @@ export default function Contact() {
                 </div>
 
                 <div className="sm:col-span-1">
-                  <label
-                    htmlFor="subject"
-                    className="text-sm font-medium text-gray-700"
-                  >
+                  <label htmlFor="subject" className="text-sm font-medium text-gray-700">
                     Subject
                   </label>
                   <input
@@ -198,10 +185,7 @@ export default function Contact() {
                 </div>
 
                 <div className="sm:col-span-2">
-                  <label
-                    htmlFor="message"
-                    className="text-sm font-medium text-gray-700"
-                  >
+                  <label htmlFor="message" className="text-sm font-medium text-gray-700">
                     Message
                   </label>
                   <textarea
@@ -239,6 +223,6 @@ export default function Contact() {
           </div>
         </div>
       </section>
-    </div>
+    </section>
   );
 }
