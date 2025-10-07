@@ -20,29 +20,29 @@ const Banner = () => {
       image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=80",
       title: "Education Changes Lives",
       description: "Empowering communities through quality education and learning opportunities for every child.",
-      ctaPrimary: "Read News",
-      ctaSecondary: "Learn More →"
+      ctaPrimary: "বাংলা",
+      ctaSecondary: "English"
     },
     {
       image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=1600&q=80",
       title: "Healthcare for All",
       description: "Bringing essential medical care and health services to underserved communities worldwide.",
-      ctaPrimary: "Read News",
-      ctaSecondary: "Our Programs →"
+      ctaPrimary: "বাংলা",
+      ctaSecondary: "English"
     },
     {
       image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1600&q=80",
       title: "Clean Water Initiative",
       description: "Providing access to clean, safe drinking water and sanitation facilities for rural communities.",
-      ctaPrimary: "Read News",
-      ctaSecondary: "Our Impact →"
+      ctaPrimary: "বাংলা",
+      ctaSecondary: "English"
     },
     {
       image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?auto=format&fit=crop&w=1600&q=80",
       title: "Women Empowerment",
       description: "Supporting women with skills training, microfinance, and leadership development programs.",
-      ctaPrimary: "Read News",
-      ctaSecondary: "Join Us →"
+      ctaPrimary: "বাংলা",
+      ctaSecondary: "English"
     }
   ];
 
