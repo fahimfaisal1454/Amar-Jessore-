@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -157,8 +158,16 @@ const Banner = () => {
             ))}
           </div>
 
-          {/* Right-side CTA → News */}
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          {/* Right-side CTAs: Dashboard + News */}
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-3">
+            <Link
+              to="/dashboard"
+              className="relative overflow-hidden rounded-full bg-gradient-to-r from-blue-600 to-lime-500 px-6 py-3 text-sm font-bold text-white shadow-lg hover:shadow-blue-500/30 transform hover:scale-105 transition-all duration-300 group"
+            >
+              <span className="relative z-10">Dashboard</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-lime-400 to-blue-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+            </Link>
+
             <a
               href="#news"
               onClick={(e) => handleNavClick(e, '#news')}
@@ -204,6 +213,15 @@ const Banner = () => {
                   {item.name}
                 </a>
               ))}
+
+              {/* Mobile CTA → Dashboard */}
+              <Link
+                to="/dashboard"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block w-full text-center rounded-full bg-gradient-to-r from-blue-600 to-lime-500 px-6 py-3 text-base font-bold text-white shadow-lg hover:shadow-blue-500/30 transform hover:scale-105 transition-all duration-300"
+              >
+                Dashboard
+              </Link>
 
               {/* Mobile CTA → News */}
               <a

@@ -3,11 +3,11 @@ import Sidebar from "../Components/Sidebar/Sidebar";
 
 export default function Dashboard() {
   return (
-    <div className="flex">
+    <div className="w-full min-h-screen flex bg-gray-50">
       <Sidebar />
-      <div className="flex-grow p-4">
-        <Outlet /> 
-      </div>
+      <main className="flex-1 h-screen overflow-auto p-4 md:p-6 lg:p-8">
+        <Outlet />
+      </main>
     </div>
   );
 }

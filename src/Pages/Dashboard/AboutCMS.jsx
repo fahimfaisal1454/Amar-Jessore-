@@ -33,9 +33,7 @@ export default function AboutCMS() {
           <h2 className="font-semibold mb-2">Features</h2>
           <ul className="list-disc ml-6 space-y-1">
             {about.features.map((f, i) => (
-              <li key={i}>
-                <strong>{f.title}</strong>{f.detail ? ` — ${f.detail}` : ""}
-              </li>
+              <li key={i}><strong>{f.title}</strong>{f.detail ? ` — ${f.detail}` : ""}</li>
             ))}
           </ul>
         </div>
