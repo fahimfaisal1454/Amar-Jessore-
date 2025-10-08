@@ -39,3 +39,5 @@ section {
   scroll-margin-top: 7rem; /* ensures headings don’t hide behind navbar */
   transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
+
+

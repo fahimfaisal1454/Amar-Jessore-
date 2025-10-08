@@ -12,12 +12,26 @@ export default function AboutUs() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 grid gap-12 md:grid-cols-2 items-center">
         {/* Left: copy */}
-        <div>
-          <div className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-semibold text-lime-700 border-lime-200 bg-lime-50">
+        <div
+          data-aos="fade-left"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-once="false"
+        >
+          <div
+            className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-semibold text-lime-700 border-lime-200 bg-lime-50"
+            data-aos="zoom-in"
+            data-aos-delay="80"
+            data-aos-once="false"
+          >
             <HeartHandshake className="w-4 h-4" /> About Amar Jessore
           </div>
 
-          <h2 className="mt-4 text-4xl md:text-5xl font-extrabold leading-tight">
+          <h2
+            className="mt-4 text-4xl md:text-5xl font-extrabold leading-tight"
+            data-aos="fade-up"
+            data-aos-delay="120"
+            data-aos-once="false"
+          >
             Empowering Jessore through{" "}
             <span className="bg-gradient-to-r from-lime-500 to-green-500 bg-clip-text text-transparent">
               education, health & environment
@@ -25,7 +39,12 @@ export default function AboutUs() {
             .
           </h2>
 
-          <p className="mt-4 text-lg text-gray-600">
+          <p
+            className="mt-4 text-lg text-gray-600"
+            data-aos="fade-up"
+            data-aos-delay="160"
+            data-aos-once="false"
+          >
             We are a community-driven NGO focused on sustainable change.
             From school support to rural health camps and green initiatives,
             our volunteers and partners work hand-in-hand to build a brighter future.
@@ -33,7 +52,12 @@ export default function AboutUs() {
 
           {/* Pill list */}
           <ul className="mt-6 space-y-3">
-            <li className="flex items-start gap-3">
+            <li
+              className="flex items-start gap-3"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-once="false"
+            >
               <GraduationCap className="w-6 h-6 text-lime-600 mt-1" />
               <div>
                 <p className="font-semibold">Education Support</p>
@@ -42,7 +66,12 @@ export default function AboutUs() {
                 </p>
               </div>
             </li>
-            <li className="flex items-start gap-3">
+            <li
+              className="flex items-start gap-3"
+              data-aos="fade-up"
+              data-aos-delay="260"
+              data-aos-once="false"
+            >
               <Stethoscope className="w-6 h-6 text-lime-600 mt-1" />
               <div>
                 <p className="font-semibold">Healthcare Access</p>
@@ -51,7 +80,12 @@ export default function AboutUs() {
                 </p>
               </div>
             </li>
-            <li className="flex items-start gap-3">
+            <li
+              className="flex items-start gap-3"
+              data-aos="fade-up"
+              data-aos-delay="320"
+              data-aos-once="false"
+            >
               <Leaf className="w-6 h-6 text-lime-600 mt-1" />
               <div>
                 <p className="font-semibold">Environment Action</p>
@@ -61,13 +95,15 @@ export default function AboutUs() {
               </div>
             </li>
           </ul>
-
-          {/* Actions */}
-         
         </div>
 
         {/* Right: image collage */}
-        <div className="relative">
+        <div
+          className="relative"
+          data-aos="zoom-in-up"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-once="false"
+        >
           <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl ring-1 ring-gray-200">
             <img
               src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1600&q=80"
@@ -78,7 +114,12 @@ export default function AboutUs() {
           </div>
 
           {/* floating card */}
-          <div className="absolute -bottom-6 -left-6 hidden sm:block">
+          <div
+            className="absolute -bottom-6 -left-6 hidden sm:block"
+            data-aos="fade-up"
+            data-aos-delay="160"
+            data-aos-once="false"
+          >
             <div className="rounded-2xl bg-white shadow-lg p-4 ring-1 ring-gray-200">
               <p className="text-sm font-semibold text-gray-900">
                 Community Impact

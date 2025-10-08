@@ -46,7 +46,11 @@ export default function NewsSection() {
       className="scroll-mt-28 md:scroll-mt-32 bg-gray-50 text-gray-900 py-1"
     >
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-12">
+        <div
+          className="text-center mb-12"
+          data-aos="fade-down"
+          data-aos-duration="800"
+        >
           <h2 className="text-4xl font-extrabold text-gray-900">
             Latest News & Updates
           </h2>
@@ -57,9 +61,11 @@ export default function NewsSection() {
         </div>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {news.map((item) => (
+          {news.map((item, index) => (
             <article
               key={item.id}
+              data-aos="fade-up"
+              data-aos-delay={index * 150} // stagger animation
               className="group rounded-2xl overflow-hidden bg-white border hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
             >
               <div className="overflow-hidden">

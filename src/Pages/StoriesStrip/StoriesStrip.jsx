@@ -9,7 +9,7 @@ export default function StoriesStrip({ posts = [] }) {
       slug: "blood-donation-camp-jessore",
       title: "Community Blood Donation Camp",
       date: "2025-01-15",
-      image: "/images/demo/blood-donation.jpg", // put a local image or keep placeholder
+      image: "/images/demo/blood-donation.jpg",
       tag: "Health",
       excerpt:
         "Volunteers and youth groups came together to collect 120+ units of blood for patients in need.",
@@ -39,31 +39,46 @@ export default function StoriesStrip({ posts = [] }) {
   const list = (posts && posts.length > 0 ? posts : demoPosts).slice(0, 3);
 
   return (
-    <section id="stories" className="relative bg-gradient-to-b from-white to-gray-50 py-16 overflow-hidden">
+    <section
+      id="stories"
+      className="relative bg-gradient-to-b from-white to-gray-50 py-16 overflow-hidden"
+    >
       {/* subtle pattern */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,#e5e7eb_1px,transparent_0)] [background-size:22px_22px] opacity-30"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,#e5e7eb_1px,transparent_0)] [background-size:22px_22px] opacity-30" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <div className="flex flex-col items-center mb-8">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 text-center">
+        <div
+          className="flex flex-col items-center mb-8"
+          data-aos="fade-down"
+          data-aos-duration="800"
+          data-aos-once="false"
+        >
+          <div className="text-center">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
               Our Stories
             </h2>
-            <div className="mt-3 w-24 h-1 bg-lime-600 rounded-full mx-auto"></div>
+            <div className="mt-3 w-24 h-1 bg-lime-600 rounded-full mx-auto" />
           </div>
           <a
             href="/resources"
-            className="text-lime-700 font-medium hover:underline"
+            className="text-lime-700 font-medium hover:underline mt-2"
+            data-aos="fade"
+            data-aos-delay="150"
+            data-aos-once="false"
           >
             All stories →
           </a>
         </div>
 
         <div className="grid gap-8 md:grid-cols-3">
-          {list.map((p) => (
+          {list.map((p, idx) => (
             <a
               key={p.id || p.slug}
               href={`/resources/${p.slug}`}
+              data-aos="fade-up"
+              data-aos-delay={idx * 140}           // stagger
+              data-aos-anchor-placement="top-bottom"
+              data-aos-once="false"                 // replay on re-enter
               className="group relative rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
               <div className="relative h-48 w-full overflow-hidden">
@@ -74,7 +89,7 @@ export default function StoriesStrip({ posts = [] }) {
                   loading="lazy"
                 />
                 {/* gradient overlay */}
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent"></div>
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
                 {/* tag pill */}
                 {p.tag && (
                   <span className="absolute left-3 top-3 inline-flex items-center rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-lime-700 shadow">
@@ -101,7 +116,7 @@ export default function StoriesStrip({ posts = [] }) {
               </div>
 
               {/* bottom accent on hover */}
-              <div className="absolute bottom-0 left-0 h-1 w-0 bg-lime-600 group-hover:w-full transition-all duration-500"></div>
+              <div className="absolute bottom-0 left-0 h-1 w-0 bg-lime-600 group-hover:w-full transition-all duration-500" />
             </a>
           ))}
         </div>
